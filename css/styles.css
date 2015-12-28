@@ -1,0 +1,64 @@
+/* Main stylesheet for index of jakepodell.com */
+
+body{
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    margin: 0;
+
+}
+
+#header_img{
+    position: absolute;
+    width: 110%;
+    height: 100%;
+    transform: translateX(-5%);
+    margin: -6px;
+    filter:url(#blur);
+}
+
+/*Gaussian blur effect for header image*/
+.blur {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    filter: blur(5px);
+}
+
+#header_container{
+    transform: translate3D(0,0,0);
+    position: relative;
+    height: 750px;
+}
+
+#header_text{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    transform: translate3D(0,0,0);
+    transform: translateY(100%);
+    height: 150px;
+    color: white;
+    font-size: 24px;
+    font-family: Helvetica;
+    -webkit-transition: 1s;
+    transition: 1s;
+    opacity: 0;
+}
+
+#header_text #text{
+    padding: 30px 0 10px 0;
+    text-align: center;
+}
+
+#header_text #text p{
+    font-size: 14px;
+}
+
+#header_text #text h1{
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.header_hr{
+    position: absolute;
+    width: 100%;
+}
