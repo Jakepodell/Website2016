@@ -9,11 +9,12 @@ body{
 
 #header_img{
     position: absolute;
-    width: 110%;
+    width: 100%;
     height: 100%;
-    transform: translateX(-5%);
+    transform: translate(-2%,-12%);
     margin: -6px;
     filter:url(#blur);
+    opacity: 0;
 }
 
 /*Gaussian blur effect for header image*/
@@ -26,7 +27,7 @@ body{
 #header_container{
     transform: translate3D(0,0,0);
     position: relative;
-    height: 750px;
+    /*height: 750px;*/
 }
 
 #header_text{

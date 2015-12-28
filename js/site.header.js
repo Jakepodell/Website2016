@@ -13,10 +13,22 @@ Site.header = {
 
     $header_image: $("#header_img"),
     $header_text: $("#header_text"),
+    $header_svg: $("#header_svg"),
+
+
 
     init: function (site) {
         this.init_image_blur();
+        this.init_image_size();
         setTimeout(function(){site.init_text_entry()},1000);
+        window.onresize = function(event) {
+            site.init_image_size();
+        };
+    },
+
+    init_image_size: function () {
+        this.$header_image.css("opacity","1");
+        this.$header_svg.height((this.$header_svg.width()*1080/1920)+25);
     },
 
     init_image_blur: function () {
