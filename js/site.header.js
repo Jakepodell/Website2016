@@ -44,7 +44,7 @@ Site.header = {
         this.$header_svg.height((this.$header_svg.width()*image_aspect_ratio)+blur_offset);
         /* If the image is smaller than the screen, contain the header to the height of the image
            If the image is taller than the screen, contain the header to the height of the screen */
-        this.$header_container.height(Math.min(this.$header_svg.height(),window.innerHeight *.9));
+        this.$header_container.height(Math.min(this.$header_svg.height(),window.innerHeight *.95));
         this.$header_image.css("opacity","1"); //image invisible before initial sizing.
 
     },
@@ -72,7 +72,7 @@ Site.header = {
      */
     init_text_entry: function () {
         this.$header_text.css("opacity","1");
-        this.$header_text.css("transform" , "translateY(165px)");
+        this.$header_text.css("transform" , "translateY(250px)");
     }
 }
 
