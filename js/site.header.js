@@ -22,10 +22,10 @@ Site.header = {
      */
     init: function () {
         this.init_image_size();
-        this.init_image_blur();
-        setTimeout(function(){
+        //this.init_image_blur();
+        //setTimeout(function(){
             Site.header.init_text_entry();
-        },1000); //text fades in after image blur has occurred
+        //},1000); //text fades in after image blur has occurred
 
         window.onresize = function() {
             Site.header.init_image_size(); //re-initialize the image size on window size changes
@@ -44,16 +44,17 @@ Site.header = {
         this.$header_svg.height((this.$header_svg.width()*image_aspect_ratio)+blur_offset);
         /* If the image is smaller than the screen, contain the header to the height of the image
            If the image is taller than the screen, contain the header to the height of the screen */
-        this.$header_container.height(Math.min(this.$header_svg.height(),window.innerHeight));
+        this.$header_container.height(Math.min(this.$header_svg.height(),window.innerHeight *.9));
+        this.$header_image.css("opacity","1"); //image invisible before initial sizing.
+
     },
 
     /**
      * Blur the header image by changing the stdDeviation of the svg filter
      */
     init_image_blur: function () {
-        this.$header_image.css("opacity","1"); //image invisible before initial sizing.
         var std =0; //blur intensity
-        var std_inc_rate = 20;
+        var std_inc_rate = 10;
         var std_incrementent = 0.2;
         var final_std = 8;
         blur();
