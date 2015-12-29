@@ -71,7 +71,7 @@ Site.header = {
      */
     init_text_entry: function () {
         this.$header_text.css("opacity","1");
-        this.$header_text.css("transform" , "translateY(200px)");
+        this.$header_text.css("transform" , "translateY(165px)");
     }
 }
 

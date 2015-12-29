@@ -38,7 +38,7 @@ body{
     width: 50%;
     left: 25%;
     transform: translate3D(0,0,0);
-    transform: translateY(250px);
+    transform: translateY(225px);
     height: 150px;
     color: white;
     font-size: 24px;
@@ -63,6 +63,7 @@ body{
     font-size: 3em;
     margin: 0;
     font-family: 'Alegreya Sans', sans-serif;
+    /*text-shadow: 2px 2px 2px black;*/
 }
 .header_hr{
     position: absolute;
@@ -74,19 +75,20 @@ body{
     width: 110%;
 }
 
-#header_button{
+.button{
     text-decoration: none;
     padding: 10px;
     width: 200px;
     color: white;
     display: inline-block;
     text-align: center;
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 5px;
     transition: 0.5s;
+    font-family: 'Open Sans', sans-serif;
 }
 
-#header_button:hover{
+.button:hover{
     background-color: rgba(255,255,255,.75);
     color: #c56fa9;
 }
@@ -94,6 +96,45 @@ body{
 #header_button_container{
     text-align: center;
     padding: 25px;
+}
+
+
+#nav_bar{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    transform: translateY(75px);
+    height: 150px;
+    color: white;
+    font-size: 24px;
+    font-family: Helvetica;
+    -webkit-transition: 1s;
+    transition: 1s;
+    text-align: center;
+}
+
+#nav_bar .button{
+    width: auto;
+    margin: auto 20px;
+    border: none;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+#nav_bar .button:hover{
+    background-color: transparent;
+    color: white;
+    transform: translateY(-5px);
+    text-shadow: 0 0 40px white;
+    /*font-size: 22px;*/
+    margin: auto 20px;
+}
+
+/* ---------------  ABOUT SECTION ------------ */
+
+#about{
+    height: 500px;
+    background-color: lightgrey;
 }
 
 /* ---------------  WORK SECTION ------------ */
