@@ -1,9 +1,7 @@
 /* Main stylesheet for index of jakepodell.com */
 
 body{
-    -webkit-transform: translate3d(0, 0, 0);
-    margin: 0;
-    margin-top: -25px;
+    margin: -25px 0 0;
 
 }
 
@@ -37,15 +35,22 @@ body{
     position: absolute;
     width: 50%;
     left: 25%;
-    transform: translate3D(0,0,0);
-    transform: translateY(275px);
     height: 150px;
     color: white;
     font-size: 24px;
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif;
     -webkit-transition: 1s;
     transition: 1s;
+}
+
+.header_text_low{
+    transform: translateY(275px);
     opacity: 0;
+}
+
+.header_text_raised{
+    transform: translateY(250px);
+    opacity: 1;
 }
 
 #header_text #text{
@@ -103,7 +108,7 @@ body{
     height: 150px;
     color: white;
     font-size: 24px;
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif;
     -webkit-transition: 1s;
     transition: 1s;
     text-align: center;
@@ -113,8 +118,10 @@ body{
     width: auto;
     margin: auto 20px;
     border: none;
-    font-size: 20px;
+    font-size: 16px;
     vertical-align: top;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #nav_bar .button:hover{
@@ -140,12 +147,14 @@ body{
 }
 
 #about_text h3{
-    font-size: 1.5em;
+    font-size: 3em;
+    font-family: 'Tangerine', cursive;
+    margin: 0 auto 30px;
 }
 
-    #about_text p{
-        font-size: 1em;
-    }
+#about_text p{
+    font-size: 1em;
+}
 
 #about .header_hr{
     margin: 50px 0;
@@ -155,4 +164,20 @@ body{
 
 #work{
     height: 500px;
+}
+
+/* ============================== Smaller desktop screens ====================== */
+
+@media screen and (max-width: 1400px) {
+    #nav_bar{
+        transform: translateY(50px);
+    }
+
+    .header_text_low{
+        transform: translateY(175px);
+    }
+
+    .header_text_raised{
+        transform: translateY(150px);
+    }
 }

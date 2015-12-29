@@ -71,8 +71,8 @@ Site.header = {
      * Fade the text in and ease into visible
      */
     init_text_entry: function () {
-        this.$header_text.css("opacity","1");
-        this.$header_text.css("transform" , "translateY(250px)");
+        this.$header_text.removeClass("header_text_low");
+        this.$header_text.addClass("header_text_raised");
     }
 }
 
