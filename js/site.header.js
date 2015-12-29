@@ -42,7 +42,9 @@ Site.header = {
         var image_aspect_ratio = 1080/1920;
         var blur_offset = 25; //keeps the edges from blurring
         this.$header_svg.height((this.$header_svg.width()*image_aspect_ratio)+blur_offset);
-        //this.$header_container.height(this.$header_svg.height());
+        /* If the image is smaller than the screen, contain the header to the height of the image
+           If the image is taller than the screen, contain the header to the height of the screen */
+        this.$header_container.height(Math.min(this.$header_svg.height(),window.innerHeight));
     },
 
     /**
@@ -69,7 +71,7 @@ Site.header = {
      */
     init_text_entry: function () {
         this.$header_text.css("opacity","1");
-        this.$header_text.css("transform" , "translateY(90%)");
+        this.$header_text.css("transform" , "translateY(200px)");
     }
 }
 
