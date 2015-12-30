@@ -28,23 +28,29 @@ Site.work = {
      */
     init_iphone_scroll: function () {
         window.onscroll = function() {
-            var iphone_scroll_top = Site.work.$iphone.position().top;
-            var vertical_scroll_position = $(document).scrollTop()+(window.innerHeight*0.5);
-            var offset_difference = vertical_scroll_position - (iphone_scroll_top - parseInt(Site.work.$work.css("padding-top")));
-            if (offset_difference >= 0 && offset_difference <= 100) {
-                Site.work.$iphone.css("opacity" , ""+offset_difference*0.01);
-                Site.work.$iphone.css("transform" , "translateX("+(offset_difference/2-25)+"px)"); //25 =initial transform
-            }
-            else if(offset_difference<0){
-                Site.work.$iphone.css("opacity" , "0");
-                Site.work.$iphone.css("transform" , "translateX(-25px");
-            }
-            else if(offset_difference>100){
-                Site.work.$iphone.css("opacity" , "1");
-                Site.work.$iphone.css("transform" , "translateX(25px)");
-            }
-            Site.work.$iphonr_text.css("opacity","" + offset_difference>100 ? 1 : 0);
-            Site.work.$iphonr_text.css("transform","translateY(" + (offset_difference>100 ? 65 : 75) + "px)");
+
+            $(".work_item").each(function(){
+                var $image = $(this).find(".work_image");
+                var $description = $(this).find(".work_description");
+                var image_scroll_top = $image.position().top;
+                var vertical_scroll_position = $(document).scrollTop()+(window.innerHeight*0.5);
+                var offset_difference = vertical_scroll_position - (image_scroll_top - parseInt(Site.work.$work.css("padding-top")));
+                if (offset_difference >= 0 && offset_difference <= 100) {
+                    $image.css("opacity" , ""+offset_difference*0.01);
+                    $image.css("transform" , "translateX("+((offset_difference/2-25)*($image.hasClass("slide_from_left") ? 1 : -1))+"px)"); //25 =initial transform
+                }
+                else if(offset_difference<0){
+                    $image.css("opacity" , "0");
+                    $image.css("transform" , "translateX("+($image.hasClass("slide_from_left") ? -2 : 2)+"5px)");
+                }
+                else if(offset_difference>100){
+                    $image.css("opacity" , "1");
+                    $image.css("transform" , "translateX("+($image.hasClass("slide_from_left") ? 2 : -2)+"5px)");
+                }
+                $description.css("opacity","" + offset_difference>100 ? 1 : 0);
+                $description.css("transform","translateY(" + (offset_difference>100 ? 65 : 75) + "px)");
+            })
+
         }
     },
 }

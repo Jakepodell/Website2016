@@ -138,6 +138,7 @@ body{
 #about{
     background-color: #e7e7e7;
     text-align: center;
+    overflow: hidden;
 }
 
 #about_text{
@@ -160,6 +161,16 @@ body{
     margin: 50px 0;
     width: 100%;
 }
+
+#headshot{
+    display: inline-block;
+    transform: translateY(75px);
+}
+
+#headshot img{
+    width: 400px;
+}
+
 /* ---------------  WORK SECTION ------------ */
 
 #work{
@@ -185,16 +196,30 @@ body{
     transform: translateX(-25px);
 }
 
+.slide_from_right{
+    float: right;
+    transform: translateX(25px);
+}
+
 #iphone{
     /*transform: translate3D(0,0,0);*/
 }
 
-#iphone_text{
+.work_item{
+    display: inline-block;
+    margin-bottom:100px;
+}
+
+.work_item .work_description{
     transform: translateY(75px);
     opacity: 0;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    width: 90%;
+    padding-left: 30px;
 }
+
+
 
 /* ============================== Smaller desktop screens ====================== */
 
