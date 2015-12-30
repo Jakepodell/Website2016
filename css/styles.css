@@ -164,6 +164,36 @@ body{
 
 #work{
     height: 500px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+#work_container{
+    width: 75%;
+    display: inline-block;
+}
+
+.work_image{
+    transition: 0.5s;
+    -webskit-transition: 0.5s;
+    transition-timing-function: ease-out;
+    opacity: 0;
+}
+
+.slide_from_left{
+    float: left;
+    transform: translateX(-25px);
+}
+
+#iphone{
+    /*transform: translate3D(0,0,0);*/
+}
+
+#iphone_text{
+    transform: translateY(75px);
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 /* ============================== Smaller desktop screens ====================== */

@@ -2,7 +2,7 @@
 
  jakepodell.com Header JS File
  AUTHOR: Jake Podell| jhp246@cornell.edu
- FILE CREATED: 8/3/15
+ FILE CREATED: 12/27/15
  REQUIRES: JQUERY 1.7+
 
  ----------------------------------------------  */
@@ -62,9 +62,7 @@ Site.header = {
             std+=std_incrementent;
             document.getElementById("blurE").setAttribute("stdDeviation", ""+std);
             if(std<final_std)setTimeout(blur,std_inc_rate);
-
         }
-
     },
 
     /**
