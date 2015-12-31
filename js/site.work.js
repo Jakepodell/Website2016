@@ -48,7 +48,7 @@ Site.work = {
                     $image.css("transform" , "translateX("+($image.hasClass("slide_from_left") ? 2 : -2)+"5px)");
                 }
                 $description.css("opacity","" + offset_difference>100 ? 1 : 0);
-                $description.css("transform","translateY(" + (offset_difference>100 ? 65 : 75) + "px)");
+                $description.css("transform","translateY(" + (offset_difference>100 ? 0 : 15) + "px)");
             })
 
         }

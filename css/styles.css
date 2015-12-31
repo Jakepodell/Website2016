@@ -163,8 +163,9 @@ body{
 }
 
 #headshot{
-    display: inline-block;
+    /*display: inline-block;*/
     transform: translateY(75px);
+    display: none;
 }
 
 #headshot img{
@@ -179,7 +180,7 @@ body{
 }
 
 #work_container{
-    width: 75%;
+    width: 85%;
     display: inline-block;
 }
 
@@ -188,6 +189,7 @@ body{
     -webskit-transition: 0.5s;
     transition-timing-function: ease-out;
     opacity: 0;
+    width: 450px;
 }
 
 .slide_from_left{
@@ -206,19 +208,23 @@ body{
 
 .work_item{
     display: inline-block;
-    margin: 10px;
+    margin: 50px 10px;
 }
 
 .work_item .work_description{
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
-    transform: translateY(75px);
+    transform: translateY(15px);
     opacity: 0;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    width: 90%;
-    padding-left: 30px;
+    width: 510px;
+    display: inline-block;
+    box-shadow: 0 0 50px 0 rgba(0,0,0,0.1);
+    padding: 50px;
+    text-align: left;
 }
+
 
 /* ---------------  CONTACT SECTION ------------ */
 
