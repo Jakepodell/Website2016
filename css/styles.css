@@ -236,6 +236,8 @@ body{
     opacity: 0;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    transition-delay: 0.25s;
+    -webkit-transition-delay: 0.25s;
     width: 510px;
     display: inline-block;
     box-shadow: 0 0 50px 0 rgba(0,0,0,0.1);
@@ -295,5 +297,13 @@ body{
 
     .header_text_raised{
         transform: translateY(150px);
+    }
+
+    .work_description{
+        width: 35%;
+    }
+
+    .work_image{
+        width: 38%;
     }
 }
