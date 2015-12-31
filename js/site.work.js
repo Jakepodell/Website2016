@@ -31,6 +31,7 @@ Site.work = {
 
             $(".work_item").each(function(){
                 var $image = $(this).find(".work_image");
+                var $hr = $(this).find(".work_item_divider");
                 var $description = $(this).find(".work_description");
                 var image_scroll_top = $image.position().top;
                 var vertical_scroll_position = $(document).scrollTop()+(window.innerHeight*0.5);
@@ -42,10 +43,12 @@ Site.work = {
                 else if(offset_difference<0){
                     $image.css("opacity" , "0");
                     $image.css("transform" , "translateX("+($image.hasClass("slide_from_left") ? -2 : 2)+"5px)");
+                    $hr.css("opacity","0");
                 }
                 else if(offset_difference>100){
                     $image.css("opacity" , "1");
                     $image.css("transform" , "translateX("+($image.hasClass("slide_from_left") ? 2 : -2)+"5px)");
+                    $hr.css("opacity","0.5");
                 }
                 $description.css("opacity","" + offset_difference>100 ? 1 : 0);
                 $description.css("transform","translateY(" + (offset_difference>100 ? 0 : 15) + "px)");
