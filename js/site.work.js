@@ -51,7 +51,8 @@ Site.work = {
                 else if(offset_difference>100){
                     $image.css("opacity" , "1");
                     $image.css("transform" , "translateX("+($image.hasClass("slide_from_left") ? 2 : -2)+"5px)");
-                    $hr.css("opacity","0.5");
+                    $hr.css("opacity","0.25");
+                    $hr.css("width","50%");
                 }
                 //Show or hide the description based on if the transion region has been passed
                 $description.css("opacity","" + offset_difference>100 ? 1 : 0);

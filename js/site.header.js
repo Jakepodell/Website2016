@@ -39,12 +39,12 @@ Site.header = {
      *
      */
     init_image_size: function () {
-        var image_aspect_ratio = 1080/1920;
+        var image_aspect_ratio = window.innerWidth>770 ? 1000/1920 : 1.5;
         var blur_offset = 25; //keeps the edges from blurring
         this.$header_svg.height((this.$header_svg.width()*image_aspect_ratio)+blur_offset);
         /* If the image is smaller than the screen, contain the header to the height of the image
            If the image is taller than the screen, contain the header to the height of the screen */
-        this.$header_container.height(Math.min(this.$header_svg.height(),window.innerHeight *.95));
+        this.$header_container.height(Math.min(this.$header_svg.height(),window.innerHeight * 1.1));
         this.$header_image.css("opacity","1"); //image invisible before initial sizing.
 
     },
