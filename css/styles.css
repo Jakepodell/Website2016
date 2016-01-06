@@ -2,7 +2,6 @@
 
 body{
     margin: -25px 0 0;
-
 }
 
 /* ---------  HEADER ---------- */
@@ -128,8 +127,41 @@ body{
 
 #mobile_nav_button{
     display: none;
+    cursor: pointer;
 }
 
+#mobile_nav_bar{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #26262A;
+    height: 100vh;
+    z-index: 10;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+#mobile_nav_bar.visible{
+    width: 75%;
+}
+
+#mobile_nav_bar.hidden{
+    width: 0%;
+}
+
+#mobile_nav_bar .mobile_button{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color:white;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid lightgray;
+    padding:15px 10px 15px 0;
+    text-transform: uppercase;
+}
 /* ---------------  ABOUT SECTION ------------ */
 
 #about{
