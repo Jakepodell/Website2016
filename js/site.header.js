@@ -21,15 +21,15 @@ Site.header = {
      * initialize the header of the site, including image and text
      */
     init: function () {
-        this.init_image_size();
+        //this.init_image_size();
         //this.init_image_blur();
         //setTimeout(function(){
             Site.header.init_text_entry();
         //},1000); //text fades in after image blur has occurred
 
-        window.onresize = function() {
-            Site.header.init_image_size(); //re-initialize the image size on window size changes
-        };
+        //window.onresize = function() {
+        //    Site.header.init_image_size(); //re-initialize the image size on window size changes
+        //};
     },
 
     /**
