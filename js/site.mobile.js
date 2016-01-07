@@ -16,7 +16,10 @@ Site.mobile = {
 
 
     /**
-     * initialize the header of the site, including image and text
+     * The behavior for the mobile navigation menu.
+     * When the hamberger style button is pressed, the menu flies out.
+     * If the menu is out and there is a click outside of it, the menu closes.
+     * This is done by toggling "visible" and "hidden" classes.
      */
     init: function () {
 
@@ -33,7 +36,6 @@ Site.mobile = {
             }
         })
     },
-
 
 }
 

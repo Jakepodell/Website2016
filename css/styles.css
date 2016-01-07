@@ -20,6 +20,7 @@ body{
 
 #header{
     margin-bottom: -10px;
+    overflow: hidden;
 }
 
 #header_container{
@@ -126,8 +127,11 @@ body{
 }
 
 #mobile_nav_button{
-    display: none;
     cursor: pointer;
+}
+
+.mobile{
+    display: none;
 }
 
 #mobile_nav_bar{
@@ -137,16 +141,20 @@ body{
     background-color: #26262A;
     height: 100vh;
     z-index: 10;
-    transition: 1s;
-    -webkit-transition: 1s;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    box-shadow: 0 0 50px black;
+    overflow: hidden;
 }
 
 #mobile_nav_bar.visible{
     width: 75%;
+    opacity: 1;
 }
 
 #mobile_nav_bar.hidden{
     width: 0%;
+    opacity: 0.5;
 }
 
 #mobile_nav_bar .mobile_button{
@@ -382,44 +390,70 @@ body{
 }
 
 /* ============================== Smartphones ====================== */
-@media screen and (max-width: 770px) {
+@media screen and (max-device-width: 770px) {
 
-    #header_img {
-        width: 275%;
+    #header .background {
+        max-width: 255%;
     }
 
     #header_container .nav_bar{
         display: none;
     }
 
-    #header_text {
+    #header_container{
         width: 80%;
         left: 10%;
-    }
-
-    #header_text #text p{
-        font-size: 30px;
+        top: 15%;
     }
 
     #header_text #text h1{
-        margin: 20px 0;
-        font-size: 3.5em;
+        font-size: 6em;
+        margin: 20px auto;
     }
 
-    #header_svg {
-        width: 100%;
+    #header_text #text p{
+        font-size: 2em;
     }
 
-    #mobile_nav_button{
+    a#header_button.button{
+        padding: 30px 60px;
+        font-size: 2em;
+        width:auto;
+    }
+
+    #mobile_nav_button {
         display: block;
         position: absolute;
         width: 50px;
         height: 50px;
         z-index: 1;
         /*background-color: white;*/
-        right: 10px;
-        top: 35px;
+        right: 20px;
+        top: 20px;
         background-image: url("../res/img/mobile_burger_small_white.png");
+    }
+
+    #about_text h3{
+        font-size: 4em;
+    }
+
+    #about_text p{
+        font-size: 1.5em;
+    }
+
+    .work_description h1{
+        font-size: 3em;
+    }
+
+    .work_item .work_description{
+        margin: auto;
+        width: 90%;
+    }
+
+    .work_item .work_image{
+        float: none;
+        width: 90%;
+        margin-bottom: 10px;
     }
 
 }
