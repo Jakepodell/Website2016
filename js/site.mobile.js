@@ -24,16 +24,26 @@ Site.mobile = {
     init: function () {
 
         $(document).click(function(e){
+
+            //If the mobile nav button is pressed, show the menu
             if(Site.mobile.$nav_button.is(e.target)){
                 Site.mobile.$nav_bar.removeClass("hidden");
                 Site.mobile.$nav_bar.addClass("visible");
             }
+
+            //If the menu is visible and the user clicks outside of it,
+            //Hide the menu
             else if(!Site.mobile.$nav_bar.is(e.target)
-            && Site.mobile.$nav_bar.has(e.target).length === 0
             && Site.mobile.$nav_bar.hasClass("visible")){
                 Site.mobile.$nav_bar.removeClass("visible");
                 Site.mobile.$nav_bar.addClass("hidden");
             }
+        });
+
+        //If the user clicks a menu item, hide the menu
+        $(".mobile_button").click(function(e){
+            Site.mobile.$nav_bar.removeClass("visible");
+            Site.mobile.$nav_bar.addClass("hidden");
         })
     },
 

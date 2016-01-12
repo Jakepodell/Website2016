@@ -54,7 +54,7 @@ Site.work = {
                     $hr.css("opacity","0.25");
                     $hr.css("width","50%");
                 }
-                //Show or hide the description based on if the transion region has been passed
+                //Show or hide the description based on if the transition region has been passed
                 $description.css("opacity","" + offset_difference>100 ? 1 : 0);
                 $description.css("transform","translateY(" + (offset_difference>100 ? 0 : 15) + "px)");
             })
