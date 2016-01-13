@@ -86,6 +86,8 @@ body{
     margin-top: 50px;
     text-align: center;
     padding: 25px;
+    transition: 1s;
+    -webkit-transition: 1s;
 }
 
 .nav_bar{
@@ -100,7 +102,7 @@ body{
 
 .nav_bar .button{
     width: auto;
-    margin: auto 20px;
+    margin: auto 3.25%;
     border: none;
     font-size: 16px;
     vertical-align: top;
@@ -113,7 +115,7 @@ body{
     background-color: transparent;
     color: white;
     opacity: 1;
-    margin: auto 20px;
+    /*margin: auto 20px;*/
 }
 
 #mobile_nav_button{
@@ -306,6 +308,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     color: white;
     padding: 50px;
+    text-align: center;
 }
 
 #contact #reach_out{
@@ -333,6 +336,8 @@ body{
     position: relative;
     transform: none;
     height: auto;
+    width: 55%;
+    display: inline-block;
 }
 
 #contact .nav_bar a{
@@ -369,6 +374,31 @@ body{
     .work_image{
         width: 38%;
     }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    #header_text #text{
+        padding: 0;
+    }
+
+    #header_text.header_text_raised{
+        transform: translateY(115px);
+    }
+
+    #header_button_container{
+        margin-top: 15px;
+    }
+
+}
+
+@media screen and (max-device-width: 1024px){
+
+    .work_description h1{
+        font-size: 1.75em;
+    }
+
 }
 
 /* ============================== Smartphones ====================== */
@@ -426,6 +456,18 @@ body{
 
     .work_description h1{
         font-size: 3em;
+    }
+
+    .work_description h3{
+        font-size: 1.5em;
+    }
+
+    .work_description h5{
+        font-size: 1.13em;
+    }
+
+    .work_description p{
+        font-size: 1.25em;
     }
 
     .work_item .work_description{
